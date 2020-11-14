@@ -23,8 +23,8 @@ public class Controller {
     //private Label Label2;
     @FXML
     private Label Label3;
-    //@FXML
-    //private Label LVerContraseña;
+    @FXML
+    private Label LVerContraseña;
    // @FXML
     //private Button bGuardar;
 
@@ -34,13 +34,19 @@ public class Controller {
     }
 
     @FXML
-    public void onLVerContraseñaFocus(){
-        contraseña=Passw1.getText();
-        Text2.setText(contraseña);
-        Passw1.setVisible(false);
-        Text2.setVisible(true);
-
-
+    public void onLVerContraseñaFocus(MouseEvent event){
+        if(Passw1.isVisible()) {
+            contraseña = Passw1.getText();
+            Text2.setText(contraseña);
+            Passw1.setVisible(false);
+            Text2.setVisible(true);
+        }else{
+            if(Text2.isVisible()){
+                Passw1.setVisible(true);
+                Text2.setVisible(false);
+            }
+        }
 
     }
+
 }
