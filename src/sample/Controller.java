@@ -35,6 +35,7 @@ public class Controller {
 
     @FXML
     public void onLVerContraseñaFocus(MouseEvent event){
+        //Cuando uno sea visible el otro se hace invisible por cada vez que muevas el raton por encima
         if(Passw1.isVisible()) {
             contraseña = Passw1.getText();
             Text2.setText(contraseña);
